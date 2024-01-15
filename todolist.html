@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="body_container">
+        <div class="header_container">
+            <h1>Hi! I'm To Do List</h1>
+            <h5 class="header_description">
+                <span>
+                    Let me help you with your schedule for
+                </span>
+                <span id="today_time"></span>
+            </h5>
+        </div>
+        <div class="content_container">
+            <div class="input_wrap_container">
+                <div class="input_header_container">
+                    <input type="text" id="input_text" placeholder="Add task">
+                    <div class="input_btn" id="input_btn_add">
+                        <span class="todolist-icon-add">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="input_bottom_container">
+                    <div class="input_description">
+                        <div id="total" class="total_description">
+                            Total: 
+                            <span></span>
+                        </div>
+                        <div id="done" class="total_description">
+                            Done: 
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="btn-delete" id="btn-delete-all">
+                        <span>
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                        <span>
+                            Delete all
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="todolist_container">
+                <div class="pending_task_container">
+                    <h5>Pending tasks</h5>
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="done_task_container">
+                    <h5>Done tasks</h5>
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer_container">
+            <p>@Power by</p>
+        </div>
+    </div>
+</body>
+<script src="./todolist.js"></script>
+
+</html>

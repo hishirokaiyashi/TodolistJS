@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+:root {
+  /*Background color */
+  --background-liner-color: linear-gradient(45deg, #5189c1 25%, #41b883);
+  --background-liner-color-second: linear-gradient(
+    45deg,
+    #e1eb59 25%,
+    #ead371,
+    #ebe3be
+  );
+  --background-white-color: #fff;
+  --background-blue-color: #5189c1;
+  --background-red-color: #f65050;
+  --background-grey-color: #e3e3e3;
+
+  /*Text color */
+  --text-white-color: #fff;
+  --text-black-color: #000;
+  --text-blue-color: #5189c1;
+  --text-red-color: #db4949;
+  --text-slate-color: #334155;
+  --text-gray-color: #5e5e5e;
+}
+
+body {
+  background: linear-gradient(45deg, #5189c1 25%, #41b883);
+  width: 100%;
+}
+
+.body_container {
+  margin-top: 40px;
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_container {
+  align-self: flex-start;
+}
+
+.header_container h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.header_description span {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #334155;
+  margin-top: 10px;
+  font-weight: 450;
+}
+
+.header_description .today_time {
+  font-weight: 600;
+}
+
+.content_container {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.input_wrap_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input_header_container {
+  padding: 8px 14px;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+#input_text {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  /* display: none; */
+}
+
+.input_btn .todolist-icon-add {
+  padding: 14px;
+  background-color: #5189c1;
+  cursor: pointer;
+}
+
+.input_btn:hover .todolist-icon-add {
+  transform: rotateZ(180deg);
+}
+
+.todolist-icon-add {
+  color: var(--text-white-color);
+  border-radius: 50%;
+  background-color: var(--background-blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem;
+  transition: 0.5s ease-in-out;
+}
+
+.input_description {
+  display: flex;
+  gap: 10px;
+}
+
+.input_bottom_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_description .total_description {
+  padding: 0.5rem 0.8rem;
+  color: white;
+  background-color: #5189c1;
+  border-radius: 15px;
+}
+
+.input_bottom_container .btn-delete {
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.todolist_container {
+  color: var(--text-black-color);
+}
+
+.pending_task_container {
+  margin-bottom: 30px;
+}
+
+.pending_task_container h5,
+.done_task_container h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.pending_task_detail,
+.done_task_detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #e3e3e3;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.4);
+  border-radius: 14px;
+  margin: 10px 0px 14px;
+  gap: 5px;
+}
+
+.pending_task_left,
+.done_task_left {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.pending_task_left input,
+.done_task_left input {
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 16px;
+}
+
+.pending_task_right,
+.done_task_right {
+  display: flex;
+  gap: 10px;
+}
+
+.pending_task_right .pending_task_right-btn,
+.done_task_right .done_task_right-btn {
+  border: none;
+  outline: none;
+  background-color: white;
+  border-radius: 100%;
+  padding: 5px;
+}
+
+.pending_task_right-btn span,
+.done_task_right-btn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.pending_task_right #pendingtask_priority span {
+  color: yellow;
+}
+
+.pending_task_right #pendingtask_edit span {
+  color: orange;
+}
+
+.pending_task_right #pendingtask_delete span {
+  color: var(--background-red-color);
+}
+
+.active_done_task {
+  text-decoration: line-through;
+  color: var(--text-gray-color);
+}
+
+/* .done_task_left .done_task_name {
+  text-decoration: line-through;
+  color: var(--text-gray-color);
+} */
+
+.done_task_right #donetask_edit span {
+  color: orange;
+}
+
+.done_task_right #donetask_delete span {
+  color: var(--background-red-color);
+}
+
+.pending_task_input_left {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.hidden_item {
+  display: none !important;
+}
+.priority_item {
+  background-color: #ead371;
+}
